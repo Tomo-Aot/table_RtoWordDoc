@@ -1,0 +1,17 @@
+---
+title: "test"
+author: "aota"
+date: "2025-02-07"
+output: word_document
+output-file: Word Document
+---
+
+```{r}
+library(tidyverse)
+library(gt)
+list = tibble(
+  sp = c("A", "B", "C"),
+  value = c(100, 25,  60)
+)
+list |> gt()
+```
