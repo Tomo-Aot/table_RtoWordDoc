@@ -32,6 +32,6 @@ list = tibble(
 as_tibble() 関数に渡します。
 
 ```
-data |> as_tibble()
+your_data |> as_tibble()
 ```
 
