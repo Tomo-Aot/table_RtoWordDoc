@@ -68,13 +68,19 @@ gtsave() 関数を使って出力結果を保存することはできますが�
 
 ## Rmarkdownを使用
 
+gtsave() 関数は使うことができないので、
+別の方法を考えます。
+Rmarkdown ファイルはRで出力することができる文書ファイルです。
+この形式は、文書を出力する際に R の出力結果を表示することができます。
+そのため、この方法を使用して表を文書ファイルに出力します。
 
+ファイルを出力するために設定します。
 
 ```
 ---
-title: "test"
-author: "aota"
-date: "2025-02-07"
+title: "Document title"
+author: "your name"
+date: "year-month-date"
 output: word_document
 output-file: Word Document
 ---
