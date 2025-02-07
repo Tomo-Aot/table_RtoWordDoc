@@ -78,6 +78,7 @@ date: "2025-02-07"
 output: word_document
 output-file: Word Document
 ---
+```
 
 ```{r}
 library(tidyverse)
@@ -92,5 +93,4 @@ table = df |>
   )
 
 table |> gt()
-```
 ```
