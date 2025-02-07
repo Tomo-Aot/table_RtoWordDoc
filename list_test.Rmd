@@ -9,9 +9,15 @@ output-file: Word Document
 ```{r}
 library(tidyverse)
 library(gt)
-list = tibble(
-  sp = c("A", "B", "C"),
-  value = c(100, 25,  60)
-)
-list |> gt()
+df = iris |> as_tibble()
+
+table = df |> 
+  group_by(Species) |> 
+  summarise(
+    mean = mean(Petal.Length),
+    sd = sd(Petal.Length)
+  )
+
+table |> gt()
 ```
+
