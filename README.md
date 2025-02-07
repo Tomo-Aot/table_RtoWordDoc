@@ -47,11 +47,25 @@ your_data |> as_tibble()
 ```
 df = iris |> as_tibble()
 
-df |> 
+df = df |> 
   group_by(Species) |> 
   summarise(
     mean = mean(Petal.Length),
     sd = sd(Petal.Length)
   )
 ```
+
+種ごとに花弁の長さの平均値と標準偏差をまとめました。
+このデータを gt パッケージの gt() 関数を使って表にします。
+
+```
+df |> gt()
+```
+
+これを実行すると、viewer に表が出力されます。
+gtsave() 関数を使って出力結果を保存することはできますが、
+文書ファイルには対応していません。
+
+## Rmarkdownを使用
+
 
