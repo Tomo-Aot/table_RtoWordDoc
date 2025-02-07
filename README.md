@@ -47,7 +47,7 @@ your_data |> as_tibble()
 ```
 df = iris |> as_tibble()
 
-df = df |> 
+table = df |> 
   group_by(Species) |> 
   summarise(
     mean = mean(Petal.Length),
@@ -59,7 +59,7 @@ df = df |>
 このデータを gt パッケージの gt() 関数を使って表にします。
 
 ```
-df |> gt()
+table |> gt()
 ```
 
 これを実行すると、viewer に表が出力されます。
@@ -69,3 +69,28 @@ gtsave() 関数を使って出力結果を保存することはできますが�
 ## Rmarkdownを使用
 
 
+
+```
+---
+title: "test"
+author: "aota"
+date: "2025-02-07"
+output: word_document
+output-file: Word Document
+---
+
+```{r}
+library(tidyverse)
+library(gt)
+df = iris |> as_tibble()
+
+table = df |> 
+  group_by(Species) |> 
+  summarise(
+    mean = mean(Petal.Length),
+    sd = sd(Petal.Length)
+  )
+
+table |> gt()
+```
+```
