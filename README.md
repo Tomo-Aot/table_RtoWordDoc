@@ -77,7 +77,7 @@ Rmarkdown ファイルはRで出力することができる文書ファイルで
 ファイルを出力するために設定します。
 ワードファイルに出力するため、
 output: は word_document、
-output-file: はWord Document
+output-file: は Word Document
 に設定します。
 出力する際は Knit で実行することができます。
 
