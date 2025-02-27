@@ -36,7 +36,7 @@ list = tibble(
 as_tibble() 関数に渡します。
 
 ```
-your_data |> as_tibble()
+list |> as_tibble()
 ```
 
 ## 表の作成
